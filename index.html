@@ -42,14 +42,16 @@
 				<p class="feature-section-text">
 					Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
 				</p>
-			</section> 
+			</section>
 			<!-- feature-section end -->
-			
+
 			<section class="menu-section">
 				<h2 class="menu-section-title">Menu</h2>
 				<ul class="menu-list">
 					<li class="menu-item menu-item-coffee">
-						<h3 class="menu-item-title menu-item-coffee-title">Coffee</h3>
+						<h3 class="menu-item-title menu-item-coffee-title">
+							<a class="menu-navigation" href="#">Coffee</a>
+						</h3>
 						<table class="menu-price">
 							<tr>
 								<td class="menu-position-name">Latte</td>
@@ -71,7 +73,9 @@
 					</li> <!-- menu-item-coffe end -->
 
 					<li class="menu-item menu-item-tea">
-						<h3 class="menu-item-title menu-item-tea-title">Tea</h3>
+						<h3 class="menu-item-title menu-item-tea-title">
+							<a class="menu-navigation" href="#">Tea</a>
+						</h3>
 						<table class="menu-price">
 							<tr>
 								<td class="menu-position-name">Iced tea</td>
@@ -93,7 +97,9 @@
 					</li> <!-- menu-item-tea end -->
 
 					<li class="menu-item menu-item-desserts">
-						<h3 class="menu-item-title menu-item-desserts-title">Desserts</h3>
+						<h3 class="menu-item-title menu-item-desserts-title">
+							<a class="menu-navigation" href="#">Desserts</a>
+						</h3>
 						<table class="menu-price">
 							<tr>
 								<td class="menu-position-name">Tiramisu</td>
@@ -119,33 +125,53 @@
 
 			<section class="testimonials-section">
 				<h2 class="testimonials-section-title">Testimonials</h2>
-				<div class="testimonials-wrapper">
-					<figure class="visitor-photo">
-						<img src="img/visitor-chris-parker.png" width="84" height="84" alt="Крис Паркер">
-						<figcaption>Chris Parker</figcaption>
-					</figure>
-					<p class="testimonial-text">
-						Nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris accumsan.
-					</p>
 
-					<ul class="testimonials-toggle-list">
-						<li class="testimonials-toggle-item">
-							<a>
-								<div class="toggle active-toggle"></div>
-							</a>
-						</li>
-						<li class="testimonials-toggle-item">
-							<a href="#">
-								<div class="toggle"></div>
-							</a>
-						</li>
-						<li class="testimonials-toggle-item">
-							<a href="#">
-								<div class="toggle"></div>
-							</a>
-						</li>
-					</ul>
-				</div>
+				<div class="testimonials-slider">
+					<div class="slider-wrapper">
+						<input class="visually-hidden toggle toggle-1" type="radio" id="toggle-1" name="toggle" checked>
+						<input class="visually-hidden toggle toggle-2" type="radio" id="toggle-2" name="toggle">
+						<input class="visually-hidden toggle toggle-3" type="radio" id="toggle-3" name="toggle">
+
+						<div class="slider-controls">
+							<label class="toggle-control toggle-one-control" for="toggle-1"></label>
+							<label class="toggle-control toggle-two-control" for="toggle-2"></label>
+							<label class="toggle-control toggle-three-control" for="toggle-3"></label>
+						</div>
+
+						<div class="visitor-list-wrapper">
+							<ul class="testimonials-visitor-list">
+								<li class="testimonials-visitor-item visitor-01">
+									<figure class="visitor-photo">
+										<img src="img/visitor-chris-parker.png" width="84" height="84" alt="Chris Parker">
+										<figcaption>Chris Parker</figcaption>
+									</figure>
+									<p class="visitor-text">
+										Nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris accumsan.
+									</p>
+								</li>
+								<li class="testimonials-visitor-item visitor-02">
+									<figure class="visitor-photo">
+										<img src="img/visitor-chris-parker.png" width="84" height="84" alt="John Doe">
+										<figcaption>John Doe</figcaption>
+									</figure>
+									<p class="visitor-text">
+										Nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris accumsan.
+									</p>
+								</li>
+								<li class="testimonials-visitor-item visitor-03">
+									<figure class="visitor-photo">
+										<img src="img/visitor-chris-parker.png" width="84" height="84" alt="Thomas Richards">
+										<figcaption>Thomas Richards</figcaption>
+									</figure>
+									<p class="visitor-text">
+										Nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris accumsan.
+									</p>
+								</li>
+							</ul>
+						</div>
+
+					</div>
+				</div> <!-- testimonials-slider end -->
 			</section> <!-- testimonials-section end -->
 
 			<section class="location-section">
@@ -182,9 +208,9 @@
 						</li>
 					</ul>
 
-					<div class="map-image">
-						<img src="img/map.png" width="812" height="425" alt="Map">
-					</div> <!-- map-image end -->
+					<div class="main-map">
+						<iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13227.321412419764!2d-118.49585724577102!3d34.022565314008034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2a4cec2910019%3A0xb4170ab5ff23f5ab!2sSanta+Monica%2C+CA%2C+USA!5e0!3m2!1sen!2sru!4v1542554825617" width="812" height="425" allowfullscreen></iframe>
+					</div>
 				</div> <!-- visit-info-wrapper end -->
 			</section> <!-- location section end -->
 		</main>
@@ -225,4 +251,5 @@
 		</p>
 	</footer>
 </body>
+
 </html>

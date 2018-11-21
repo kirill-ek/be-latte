@@ -7,6 +7,11 @@ body {
 	line-height: 24px;
 	color: #28211f;
 
+	/* background-image: url("../template/Be-Latte.jpg");
+	background-repeat: no-repeat;
+	background-position: 24px 2px;
+	opacity: 0.4; */
+
 	background-color: #ffffff;
 }
 
@@ -22,6 +27,7 @@ img {
 	overflow: hidden;
 	margin: -1px;
 	white-space: nowrap;
+	-webkit-clip-path: inset(100%);
 	clip-path: inset(100%);
 	clip: rect(0, 0, 0, 0);
 }
@@ -39,7 +45,7 @@ h2 {
 	text-align: center;
 }
 
-div, 
+div,
 ul {
 	padding: 0;
 	margin: 0;
@@ -58,7 +64,7 @@ section {
 	padding-bottom: 12px;
 
 	font-family: "Lato", "Arial", sans-serif;
-	font-size: 13px;	
+	font-size: 13px;
 	font-weight: 700;
 	letter-spacing: 0.025em;
 	text-transform: uppercase;
@@ -67,10 +73,14 @@ section {
 	border: 2px solid #000000;
 }
 
-.button:hover,
+.button:hover {
+	color: #f8d14a;
+	border-color: #f8d14a;
+}
+
 .button:active {
-	color: #f5d76e;
-	border-color: #f5d76e;
+	color: #f4ca38;
+	border-color: #f4ca38;
 }
 
 .main-wrapper {
@@ -112,7 +122,7 @@ section {
 .main-logo-wrapper {
 	height: 95px;
 	overflow: visible;
-	margin-top: 5px;	
+	margin-top: 5px;
 	margin-right: 10px;
 }
 
@@ -125,10 +135,11 @@ section {
 	justify-content: flex-end;
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
 
 	width: 553px;
-	padding-top: 35px;
-	padding-bottom: 37px;
 }
 
 .main-navigation-right {
@@ -156,7 +167,6 @@ section {
 	color: #ffffff;
 }
 
-.nav-link:active,
 .nav-link:hover,
 .current-page {
 	color: #f5d76e;
@@ -164,6 +174,10 @@ section {
 
 .current-page {
 	font-weight: 900;
+}
+
+.nav-link:active {
+	color: #f4ca38;
 }
 
 .nav-link:hover:not(.current-page) {
@@ -201,7 +215,7 @@ section {
 .welcome-header-button {
 	display: inline-block;
 	width: 181px;
-	padding-top: 12px;
+	padding-top: 15px;
 	margin-bottom: 204px;
 	margin-left: 5px;
 
@@ -223,23 +237,12 @@ section {
 .testimonials-section:after {
 	content: "";
 	position: absolute;
-	width: 100%;
+	width: 39px;
 	height: 39px;
+	left: 617px;
+	bottom: 52px;
 	background-image: url("../img/coffee-small.svg");
 	background-repeat: no-repeat;
-	background-position: center;
-}
-
-.feature-section:after {
-	top: 206px;
-}
-
-.menu-section:after {
-	top: 704px;
-}
-
-.testimonials-section:after {
-	top: 591px;
 }
 
 /* --- feature section --- */
@@ -286,7 +289,7 @@ section {
 
 .menu-section {
 	width: 100%;
-	margin-bottom: 190px;
+	padding-bottom: 163px;
 }
 
 .menu-section-title {
@@ -309,11 +312,10 @@ section {
 	width: 395px;
 }
 
-.menu-item-title {
+.menu-navigation {
 	display: block;
-	padding: 0;
 	padding-top: 135px;
-	padding-bottom: 136px;
+	padding-bottom: 135px;
 	margin: 0;
 	margin-bottom: 34px;
 
@@ -324,22 +326,52 @@ section {
 	color: #000000;
 }
 
-.menu-item-coffee-title {
-	background-image: url("../img/cup-of-coffee.png");
+.menu-item-coffee-title .menu-navigation {
+	background-image:
+		url("../img/grey_bg.png"),
+		url("../img/cup-of-coffee.png");
 	background-repeat: no-repeat;
 	background-color: #ececec;
 }
 
-.menu-item-tea-title {
-	background-image: url("../img/cup-of-tea.png");
+.menu-item-tea-title .menu-navigation {
+	background-image:
+		url("../img/grey_bg.png"),
+		url("../img/cup-of-tea.png");
 	background-repeat: no-repeat;
 	background-color: #ececec;
 }
 
-.menu-item-desserts-title {
-	background-image: url("../img/dessert.png");
+.menu-item-desserts-title .menu-navigation {
+	background-image:
+		url("../img/grey_bg.png"),
+		url("../img/dessert.png");
 	background-repeat: no-repeat;
-	background-color: #f4da81;
+	background-color: #ececec;
+}
+
+.menu-item-coffee-title .menu-navigation:hover {
+	background-image:
+		url("../img/yellow_bg.png"),
+		url("../img/cup-of-coffee.png");
+}
+
+.menu-item-tea-title .menu-navigation:hover {
+	background-image:
+		url("../img/yellow_bg.png"),
+		url("../img/cup-of-tea.png");
+}
+
+.menu-item-desserts-title .menu-navigation:hover {
+	background-image:
+		url("../img/yellow_bg.png"),
+		url("../img/dessert.png");
+}
+
+.menu-item-coffee-title .menu-navigation:active,
+.menu-item-tea-title .menu-navigation:active,
+.menu-item-desserts-title .menu-navigation:active {
+	outline: 2px solid #f8d14a;
 }
 
 .menu-price {
@@ -375,7 +407,7 @@ section {
 /* --- testimonials section --- */
 
 .testimonials-section {
-	margin-bottom: 200px;
+	padding-bottom: 173px;
 }
 
 .testimonials-section-title {
@@ -383,36 +415,56 @@ section {
 	color: #2f2f2f;
 }
 
-.testimonials-wrapper {
+/* --- visitor block with photo&testimonial --- */
+
+.visitor-list-wrapper {
+	width: 458px;
+	margin-left: 813px;
+
+	overflow: hidden;
+}
+
+.testimonials-visitor-list {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	flex-direction: row;
+
+	-webkit-transition: -webkit-transform 0.9s ease;
+	transition: -webkit-transform 0.9s ease;
+	transition: transform 0.9s ease;
+	transition: transform 0.9s ease, -webkit-transform 0.9s ease;
+}
+
+.testimonials-visitor-item {
 	position: relative;
-	width: 100%;
-	padding-bottom: 62px;
-
-	background-color: #39312f;
-	background-image: url("../img/coffe-bg.png");
-	background-repeat: no-repeat;
+	width: 458px;
 }
 
-.testimonials-wrapper:before {
-	content: ".01";
-	top: 33px;
-	left: 839px;
-	font-size: 90px;
-}
-
-.testimonials-wrapper:after {
-	content: "\201D";
-	top: 398px;
-	left: 1152px;
-	font-size: 210px;
-}
-
-.testimonials-wrapper:before,
-.testimonials-wrapper:after {
+.testimonials-visitor-item:before {
 	position: absolute;
+	top: 33px;
+	left: 25px;
+	font-size: 90px;
+
 	font-weight: bold;
 	line-height: 21px;
 	color: #433c3b;
+}
+
+.visitor-01:before {
+	content: ".01";
+}
+
+.visitor-02:before {
+	content: ".02";
+}
+
+.visitor-03:before {
+	content: ".03";
 }
 
 .visitor-photo {
@@ -437,10 +489,10 @@ section {
 	text-align: center;
 }
 
-.testimonial-text {
+.visitor-text {
 	width: 259px;
 	padding-right: 100px;
-	padding-bottom: 38px;
+	padding-bottom: 50px;
 	padding-left: 100px;
 	margin: 0;
 	margin-left: auto;
@@ -451,45 +503,86 @@ section {
 	color: #ffffff;
 }
 
-.testimonials-toggle-list {
+/* --- end of visitor block --- */
+/* --- testimonial slider --- */
+.testimonials-slider {
+	position: relative;
+	width: 100%;
+	padding-bottom: 62px;
+
+	background-color: #39312f;
+	background-image: url("../img/coffe-bg.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+
+.testimonials-slider:after {
+	position: absolute;
+	content: "\201D";
+	right: 23px;
+	bottom: 5px;
+	font-size: 210px;
+
+	font-weight: bold;
+	line-height: 21px;
+	color: #433c3b;
+}
+
+.slider-controls {
+	position: absolute;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	justify-content: center;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
 
-	width: 459px;
-	padding-right: 7px;
-	margin-left: auto;
+	width: 50px;
+	right: 205px;
+	bottom: 52px;
+	left: auto;
 }
 
-.testimonials-toggle-item {
-	padding-left: 11px;
-}
-
-.toggle {
+.toggle-control {
 	width: 9px;
 	height: 9px;
 
 	background-color: #ffffff;
 	border-radius: 50%;
+
+	cursor: pointer;
 }
 
-.active-toggle {
-	width: 9px;
-	height: 9px;
-	background-color: #433c3b;
+.toggle-1:checked ~ .slider-controls .toggle-one-control,
+.toggle-2:checked ~ .slider-controls .toggle-two-control,
+.toggle-3:checked ~ .slider-controls .toggle-three-control {
+	background-color: #39312f;
 	border: 1px solid #ffffff;
+	cursor: default;
+
+	-webkit-transition: background-color 0.5s;
+	transition: background-color 0.5s;
 }
 
-.toggle:not(.active-toggle):hover,
-.toggle:not(.active-toggle):active {
-	background-color: #f5d76e;
+.toggle-1:checked ~ .visitor-list-wrapper .testimonials-visitor-list {
+	-webkit-transform: translate(0);
+	transform: translate(0);
 }
 
+.toggle-2:checked ~ .visitor-list-wrapper .testimonials-visitor-list {
+	-webkit-transform: translate(-458px);
+	transform: translate(-458px);
+}
+
+.toggle-3:checked ~ .visitor-list-wrapper .testimonials-visitor-list {
+	-webkit-transform: translate(-916px);
+	transform: translate(-916px);
+}
+
+/* --- testimonial slider end --- */
 /* --- testimonials section end --- */
 /* --- feature/menu/testimonials section end --- */
+
 /* --- location section --- */
 
 .location-section {
@@ -508,19 +601,15 @@ section {
 	display: flex;
 	-webkit-box-pack: justify;
 	-ms-flex-pack: justify;
-	justify-content: flex-end;
+	justify-content: space-between;
 
 	width: 100%;
-	padding: 0;
-	margin: 0;
 	background-color: #f5d76e;
 }
 
 .visit-info-list {
-	-ms-flex-negative: 1;
-	flex-shrink: 0.5;
+	width: 370px;
 	padding-top: 53px;
-	padding-right: 8px;
 	padding-left: 49px;
 }
 
@@ -532,8 +621,6 @@ section {
 }
 
 .visit-info-text {
-	padding: 0;
-	margin: 0;
 	margin-bottom: 28px;
 	font-family: "Lato", "Arial", sans-serif;
 	font-weight: 600;
@@ -542,21 +629,15 @@ section {
 .visit-hours-table,
 .happy-hours-table {
 	width: 178px;
-	padding: 0;
-	margin: 0;
+	margin-bottom: 28px;
 
 	font-family: "Lato", "Arial", sans-serif;
 	font-weight: 700;
 	line-height: 28px;
 }
 
-.visit-hours-table {
-	margin-bottom: 32px;
-}
-
 .visit-days,
 .visit-time {
-	padding: 0;
 	padding-top: 2px;
 }
 
@@ -565,16 +646,16 @@ section {
 	font-weight: 400;
 }
 
-.visit-info-item:last-child {
-	padding: 0;
-	margin: 0;
-}
+.main-map {
+	-ms-flex-item-align: center;
+	align-self: center;
 
-.map-image {
-	width: 100%;
-	
 	font-size: 0;
 	line-height: 0;
+}
+
+.google-map {
+	border: 0;
 }
 
 /* --- location section end --- */
@@ -609,9 +690,12 @@ section {
 }
 
 svg:hover,
-svg:active,
 a.social-button-active svg {
 	fill: #f5d76e;
+}
+
+svg:active {
+	fill: #f4ca38;
 }
 
 .footer-social-item:not(:last-child) {
@@ -619,8 +703,6 @@ a.social-button-active svg {
 }
 
 .footer-address {
-	display: inline-block;
-	width: 100%;
 	padding: 0;
 	padding-bottom: 138px;
 	margin: 0 auto;
